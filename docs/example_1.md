@@ -1,15 +1,3 @@
----
-title: "Example 1: Piloting Testing with a Linked Test Design"
-subtitle: "Accuracy of item difficulties in Rasch model"
-author: "Anonymous"
-date: "2024-07-15"
-title-block-banner: true
-format: 
-  html:
-    toc: true
-    highlight-style: ayu
-    embed-resources: true
----
 
 ------------------------------------------------------------------------
 
