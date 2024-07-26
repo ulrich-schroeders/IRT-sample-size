@@ -3301,7 +3301,7 @@ window.Quarto = {
 </div>
 <p>The function <code>generate_data_grm</code> uses <code>mirt::simdata()</code> to simulate ordered categorical data given the item discriminations (<span class="math inline">\(a\)</span>), the item difficulties (<span class="math inline">\(b\)</span>), and the number of observations (<span class="math inline">\(n\)</span>). For polytomous items (i.e., multiple ordered categories) in the GRM, the probability of obtaining a category score is given:</p>
 <p><span class="math display">\[
-P(X_{pi} \geq k | a_{i1}, a_{i2}, b_{i}, \theta_{p1}, \theta_{p2}) = \frac{1}{1 + \exp (-(a_{i1} \theta_{p1} + a_{i2} \theta_{p2} - b_{ik}))}
+P(X_{pi} \geq k | a_{i1}, a_{i2}, b_{ik}, \theta_{p1}, \theta_{p2}) = \frac{1}{1 + \exp (-(a_{i1} \theta_{p1} + a_{i2} \theta_{p2} - b_{ik}))}
 \]</span></p>
 <p>where <span class="math inline">\(b_{ik}\)</span> is the difficulty parameter for modeling the probability of scoring at or above category <span class="math inline">\(k\)</span> on item <span class="math inline">\(i\)</span>. Note that in the <code>mirt</code> package the transformation <span class="math inline">\(d = -a*b\)</span> is used to match the intercept parameterization of the logistic model.</p>
 <div class="cell">
