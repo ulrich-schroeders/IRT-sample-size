@@ -20,6 +20,9 @@
             background-color: #555;
             color: white;
             overflow-y: auto;
+            position: absolute;
+            left: -250px;
+            transition: left 0.3s ease;
         }
         .sidebar h1 {
             color: #fff;
@@ -43,10 +46,49 @@
             height: 100%;
             border: none;
         }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+        .burger div {
+            width: 35px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+        }
+
+        /* Responsive CSS */
+        @media (max-width: 768px) {
+            .sidebar {
+                left: -250px;
+                position: fixed;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+
+            .burger {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
         <h1>IRT Sample Size Estimation</h1>
         <p>A series of examples demonstrate different use cases for sample size estimation in IRT.</p> 
         <p>Click on the links below to view each example:</p>
@@ -54,11 +96,19 @@
         <a href="example_2.html" target="content-frame">Example 2</a>
         <a href="example_3.html" target="content-frame">Example 3</a>
         <a href="example_4.html" target="content-frame">Example 4</a>
-		<a href="example_5.html" target="content-frame">Example 5</a>
+        <a href="example_5.html" target="content-frame">Example 5</a>
         <a href="https://osf.io/9xq7r/?view_only=2660c2d4f88d4d97873a88c7d0314f4d" target="_blank">OSF Project</a>
     </div>
+
     <div class="content">
         <iframe name="content-frame" src="example_1.html"></iframe>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("open");
+        }
+    </script>
 </body>
 </html>
