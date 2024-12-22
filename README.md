@@ -1,1 +1,6 @@
-# IRT-sample-size
+# IRT sample size estimation
+This is the online supplement with syntax examples of the manuscript:
+Schroeders, U., & Gnambs, T. (2024, July 24). *Sample Size Planning in Item Response Theory: A Tutorial.* https://doi.org/10.31234/osf.io/hv6zt
+
+# Abstract
+Although item response theory (IRT) models offer well-established psychometric advantages over traditional scoring methods, they remain underutilized in practice. Following a brief introduction to the IRT framework, we emphasize its major advantages and explore potential applications in various research areas. The main part of this tutorial provides a comprehensive, step-by-step guide to Monte Carlo simulation-based sample size estimation in IRT, which is essential for obtaining precise estimates of item and person parameters, structural effects, and model fit. Accurate a priori sample size estimation is also crucial for effective study planning, especially in pre-registration and registered reports. We highlight ten key decisions, organized into four areas: (a) determining the data generation model, (b) defining the test design and the process of missing values, (c) selecting the IRT model and parameters of interest, and (d) setting up and running the Monte Carlo simulation. The procedure is illustrated with examples from educational, personality, and clinical psychology. An extensively annotated and easily customizable syntax is available in an online repository.
