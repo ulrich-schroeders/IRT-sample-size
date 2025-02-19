@@ -3408,7 +3408,7 @@ P(X_{pi} \geq k | a_{i1}, a_{i2}, b_{ik}, \theta_{p1}, \theta_{p2}) = \frac{1}{1
 <li>Sample sizes to evaluate</li>
 </ol>
 <p>The Monte Carlo simulation runs <code>n_iterations</code> times, including the previous steps of (i) determining the data generation for the complete dataset, (ii) defining the test design and the process of missing values, (iii) selecting the IRT model and the parameter of interest. The simulation is run for different sample sizes between 300 and 900 (in increments of 100).</p>
-<p><a href="https://10.1111/j.2044-8317.1992.tb00993.x" target="_blank">Robey and Barcikowski (1992)</a> list the sample sizes for different nominal Type I error rates. For example, a liberal deviation of <span class="math inline">\(\alpha ± 1/2 \alpha\)</span> from a nominal Type I error rate of .05 requires a total of 729 iterations for an a priori Type I error rate of <span class="math inline">\(\omega = .05\)</span> and a power of <span class="math inline">\((1 - \beta) = .80\)</span>.</p>
+<p><a href="https://10.1111/j.2044-8317.1992.tb00993.x" target="_blank">Robey and Barcikowski (1992)</a> list the sample sizes for different nominal Type I error rates. For example, a liberal deviation of <span class="math inline">\(\alpha ± 1/2 \alpha\)</span> from a nominal Type I error rate of .05 requires a total of 729 iterations for an a priori Type I error rate of <span class="math inline">\(\omega = .05\)</span> and a power of <span class="math inline">\((1 - \beta) = .80\)</span>. The same logic for determining the number of replications can also be used for Type II errors.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of iterations</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>n_iterations <span class="ot">&lt;-</span> <span class="dv">729</span></span>
@@ -3446,7 +3446,7 @@ P(X_{pi} \geq k | a_{i1}, a_{i2}, b_{ik}, \theta_{p1}, \theta_{p2}) = \frac{1}{1
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-<p>The figure shows the Type I error rate as a function of sample size. Note that due to the high correlation between the dimensions, a certain proportion of the models lead to convergence problems. The average of all converged models is shown here.</p>
+<p>The figure shows the statistical power (= 1 - Type II error) as a function of sample size. Note that due to the high correlation between the dimensions, a certain proportion of the models lead to convergence problems. The average of all converged models is shown here.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparation and aggregation of results</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>res_plot <span class="ot">&lt;-</span> res <span class="sc">%&gt;%</span></span>
@@ -3527,7 +3527,7 @@ loaded via a namespace (and not attached):
 [70] gtable_0.3.6         lme4_1.1-35.5        munsell_0.5.1       
 [73] pillar_1.9.0         htmltools_0.5.8.1    brio_1.1.5          
 [76] R6_2.5.1             evaluate_1.0.1       R.methodsS3_1.8.2   
-[79] backports_1.5.0      RPushbullet_0.3.4    broom_1.0.6         
+[79] backports_1.5.0      RPushbullet_0.3.4    broom_1.0.7         
 [82] Rcpp_1.0.13-1        gridExtra_2.3        nlme_3.1-164        
 [85] permute_0.9-7        mgcv_1.9-1           xfun_0.49           
 [88] pkgconfig_2.0.3     </code></pre>
